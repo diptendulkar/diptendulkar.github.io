@@ -1,0 +1,264 @@
+/* Shared across every app on this site. Each app sets its own accent by putting
+   a class on <html>; everything else stays the same so the pages feel related. */
+
+:root {
+  --ink: #0a0d13;
+  --ink-surface: #161a23;
+  --ink-line: #232935;
+  --accent: #6d9cff;
+  --accent-dim: #5480dd;
+  --accent-tint: #171f33;
+  --accent-outline: #2c4272;
+  --text: #eef2f8;
+  --text-secondary: #aeb8cc;
+  --text-tertiary: #7c879c;
+}
+
+.app-docscan {
+  --ink: #080b14;
+  --ink-surface: #151b2b;
+  --ink-line: #1c2334;
+  --accent: #00e5c7;
+  --accent-dim: #00b39c;
+  --accent-tint: #11302f;
+  --accent-outline: #1e5f57;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+  background: var(--ink);
+}
+
+body {
+  margin: 0;
+  padding: 0 20px 96px;
+  background: var(--ink);
+  color: var(--text);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  font-size: 17px;
+  line-height: 1.65;
+}
+
+.wrap {
+  max-width: 720px;
+  margin: 0 auto;
+}
+
+header.site {
+  padding: 44px 0 12px;
+}
+
+.wordmark {
+  font-size: 26px;
+  font-weight: 700;
+  letter-spacing: -0.4px;
+  text-decoration: none;
+  color: var(--text);
+}
+
+.wordmark span {
+  color: var(--accent);
+}
+
+.crumb {
+  display: block;
+  margin-bottom: 14px;
+  color: var(--text-tertiary);
+  font-size: 14px;
+  text-decoration: none;
+}
+
+.crumb:hover {
+  color: var(--accent);
+}
+
+.badge {
+  display: inline-block;
+  margin-top: 14px;
+  padding: 5px 14px;
+  border: 1px solid var(--accent-outline);
+  border-radius: 999px;
+  background: var(--accent-tint);
+  color: var(--accent);
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 1.4px;
+  text-transform: uppercase;
+}
+
+h1 {
+  margin: 34px 0 6px;
+  font-size: 34px;
+  line-height: 1.2;
+  letter-spacing: -0.6px;
+}
+
+h2 {
+  margin: 44px 0 10px;
+  padding-top: 22px;
+  border-top: 1px solid var(--ink-line);
+  font-size: 21px;
+  letter-spacing: -0.2px;
+}
+
+p,
+li {
+  color: var(--text-secondary);
+}
+
+.updated {
+  color: var(--text-tertiary);
+  font-size: 15px;
+}
+
+.lede {
+  font-size: 19px;
+  color: var(--text);
+}
+
+a {
+  color: var(--accent-dim);
+}
+
+a:hover {
+  color: var(--accent);
+}
+
+strong {
+  color: var(--text);
+}
+
+ul {
+  padding-left: 22px;
+}
+
+li {
+  margin-bottom: 8px;
+}
+
+table {
+  width: 100%;
+  margin-top: 14px;
+  border-collapse: collapse;
+  font-size: 15px;
+}
+
+th,
+td {
+  padding: 11px 12px;
+  border: 1px solid var(--ink-line);
+  text-align: left;
+  vertical-align: top;
+  color: var(--text-secondary);
+}
+
+th {
+  background: var(--ink-surface);
+  color: var(--text);
+  font-size: 13px;
+  letter-spacing: 0.6px;
+  text-transform: uppercase;
+}
+
+code {
+  padding: 2px 6px;
+  border-radius: 5px;
+  background: var(--ink-surface);
+  color: var(--accent);
+  font-family: "SFMono-Regular", Menlo, Consolas, monospace;
+  font-size: 0.88em;
+}
+
+.card {
+  margin-top: 30px;
+  padding: 22px 24px;
+  border: 1px solid var(--accent-outline);
+  border-radius: 16px;
+  background: linear-gradient(150deg, var(--accent-tint), var(--ink-surface));
+}
+
+.card h2 {
+  margin: 0 0 6px;
+  padding: 0;
+  border: 0;
+  font-size: 19px;
+}
+
+.card p:last-child {
+  margin-bottom: 0;
+}
+
+/* The list of apps on the front page. */
+
+.apps {
+  margin: 30px 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.apps li {
+  margin: 0 0 12px;
+}
+
+.app-link {
+  display: block;
+  padding: 18px 20px;
+  border: 1px solid var(--ink-line);
+  border-radius: 16px;
+  background: var(--ink-surface);
+  color: inherit;
+  text-decoration: none;
+}
+
+.app-link:hover {
+  border-color: var(--accent-outline);
+  color: inherit;
+}
+
+.app-name {
+  font-size: 19px;
+  font-weight: 600;
+  color: var(--text);
+}
+
+.app-name em {
+  --accent: #00e5c7;
+  color: var(--accent);
+  font-style: normal;
+}
+
+.app-what {
+  margin-top: 2px;
+  color: var(--text-secondary);
+  font-size: 16px;
+}
+
+.app-meta {
+  margin-top: 10px;
+  color: var(--text-tertiary);
+  font-size: 13px;
+  letter-spacing: 0.6px;
+  text-transform: uppercase;
+}
+
+footer.site {
+  margin-top: 56px;
+  padding-top: 22px;
+  border-top: 1px solid var(--ink-line);
+  color: var(--text-tertiary);
+  font-size: 14px;
+}
+
+@media (max-width: 540px) {
+  body {
+    font-size: 16px;
+  }
+
+  h1 {
+    font-size: 27px;
+  }
+}

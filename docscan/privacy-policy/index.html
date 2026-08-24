@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en" class="app-docscan">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Privacy Policy — DocScan India</title>
+<meta name="description" content="DocScan India keeps your documents on your phone. No server, no account, no analytics, no ads.">
+<link rel="stylesheet" href="../../style.css">
+</head>
+<body>
+<div class="wrap">
+
+<header class="site">
+  <a class="crumb" href="../../">← Apps by Diptendu</a>
+  <a class="wordmark" href="../">Doc<span>Scan</span></a>
+  <div class="badge">On-device · Nothing uploaded</div>
+</header>
+
+<h1>Privacy Policy</h1>
+<p class="updated">Last updated: 24 August 2026</p>
+
+<p class="lede">DocScan India (&ldquo;the app&rdquo;) is a document scanner that runs on your phone. This
+policy explains, in plain terms, what happens to your documents and what data the app does and does
+not collect.</p>
+
+<h2>The short version</h2>
+<p>Your documents never leave your device. We operate no server, you have no account, and there is
+nothing to log in to. We cannot see your scans, because they are never sent anywhere.</p>
+<p>The app shows no ads, contains no advertising or analytics software, and sells nothing. Every
+feature is free.</p>
+
+<h2>Your documents and scans</h2>
+<p>Everything to do with your documents happens on your device:</p>
+<ul>
+  <li><strong>Captured images</strong> are processed on-device for edge detection, cropping,
+      perspective correction and colour filters.</li>
+  <li><strong>Text recognition (OCR)</strong> runs entirely on-device using an offline model shipped
+      inside the app. Your document text is never transmitted for recognition.</li>
+  <li><strong>PDF and image generation, and file-size compression</strong>, all happen on-device.</li>
+  <li><strong>Storage.</strong> Scans, generated files, extracted text and document names are stored
+      in the app&rsquo;s private storage on your phone. Other apps cannot read them. Files leave that
+      private area only when you explicitly save or share them, and then only to the destination you
+      chose.</li>
+  <li><strong>Deletion.</strong> Deleting a document in the app deletes its files and its extracted
+      text. Uninstalling the app removes everything it stored.</li>
+</ul>
+<p>We have no copy of any of it, and no way to obtain one.</p>
+
+<h2>Data we collect</h2>
+<p>None. We collect no personal information, no account details, no contact information, no
+analytics, no crash reports and no usage statistics. There is no advertising software in the app and
+no advertising identifier is read. We do not build a profile of you.</p>
+
+<h2>What Google&rsquo;s on-device scanning components do</h2>
+<p>The app uses Google ML Kit for document capture and text recognition. Both run on your device and
+never send your images or recognised text anywhere.</p>
+<p>We want to be precise about one thing rather than overclaim. ML Kit reports diagnostic metrics
+about itself to Google &mdash; for example how long a scan took and whether it succeeded &mdash; as
+described in Google&rsquo;s
+<a href="https://developers.google.com/ml-kit/android-data-disclosure">ML Kit data disclosure</a> and
+<a href="https://developers.google.com/ml-kit/terms">ML Kit terms</a>. That telemetry is about the
+scanning components, not about you, and it never includes your documents, your images or the text
+found in them. Google provides no option for an app to switch it off.</p>
+<p>This is also why the installed app still lists the <code>INTERNET</code> permission even though our
+own code makes no network requests of any kind: the permission is contributed by those Google
+components, not declared by us.</p>
+
+<h2>Purchases</h2>
+<p>There are none. The app has no in-app purchases, no subscriptions and no paid tier, and it
+contains no billing software.</p>
+
+<h2>Permissions</h2>
+<table>
+  <thead>
+    <tr><th>Permission</th><th>Why</th></tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code>CAMERA</code></td>
+      <td>To photograph documents. Images go straight into on-device processing.</td>
+    </tr>
+    <tr>
+      <td><code>USE_BIOMETRIC</code>, <code>USE_FINGERPRINT</code></td>
+      <td>The optional app lock, if you turn it on.</td>
+    </tr>
+    <tr>
+      <td><code>INTERNET</code>, <code>ACCESS_NETWORK_STATE</code></td>
+      <td>Not declared by us. Added by Google&rsquo;s ML Kit components and by Android&rsquo;s
+          background-work library. Our code has no networking in it.</td>
+    </tr>
+  </tbody>
+</table>
+<p>The app requests no storage permissions. Saving uses Android&rsquo;s system file picker, so it only
+ever writes where you point it.</p>
+
+<h2>App lock</h2>
+<p>Because people keep identity documents in a scanner app, the app offers an optional lock using
+your device&rsquo;s biometric or screen-lock credential. Authentication is performed by Android; the
+app never receives, stores or transmits your fingerprint, face data or PIN.</p>
+
+<h2>Children</h2>
+<p>The app is not directed at children and we do not knowingly collect data from anyone. It is rated
+for a general audience.</p>
+
+<h2>Security</h2>
+<p>Documents are held in app-private storage, protected by Android&rsquo;s application sandbox, and
+are optionally shielded further by the app lock. Since nothing is uploaded, there is no server-side
+breach that could expose your documents.</p>
+
+<h2>Changes to this policy</h2>
+<p>If this policy changes, the updated version will be published at this URL and the date above will
+change. Material changes will also be noted in the app&rsquo;s release notes on Google Play.</p>
+
+<h2>Contact</h2>
+<p>Questions about this policy or about privacy in the app: please open an issue at
+<a href="https://github.com/diptendulkar/diptendulkar.github.io/issues">github.com/diptendulkar/diptendulkar.github.io/issues</a>.</p>
+
+<footer class="site">
+  <a href="../../">Apps by Diptendu</a> &middot; <a href="../">DocScan India</a>
+</footer>
+
+</div>
+</body>
+</html>
