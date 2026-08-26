@@ -34,6 +34,36 @@
   --accent-outline: #6b3223;
 }
 
+.app-textrepeater {
+  --ink: #0a0a16;
+  --ink-surface: #171628;
+  --ink-line: #221f3a;
+  --accent: #a78bff;
+  --accent-dim: #8f74ea;
+  --accent-tint: #1f1a33;
+  --accent-outline: #453a75;
+}
+
+.app-madeinindia {
+  --ink: #08110d;
+  --ink-surface: #131f19;
+  --ink-line: #1c2c23;
+  --accent: #2fbf71;
+  --accent-dim: #27a662;
+  --accent-tint: #12291d;
+  --accent-outline: #235c3d;
+}
+
+.app-motivational {
+  --ink: #100d08;
+  --ink-surface: #201a11;
+  --ink-line: #2c2418;
+  --accent: #f5b73d;
+  --accent-dim: #d69c2b;
+  --accent-tint: #2b2011;
+  --accent-outline: #6a4f1c;
+}
+
 * {
   box-sizing: border-box;
 }
@@ -202,6 +232,26 @@ code {
   margin-bottom: 0;
 }
 
+/* Install link on an app page. Only ever points at a listing that is actually live. */
+
+.store {
+  display: inline-block;
+  margin-top: 22px;
+  padding: 11px 22px;
+  border: 1px solid var(--accent-outline);
+  border-radius: 999px;
+  background: var(--accent-tint);
+  color: var(--accent);
+  font-size: 15px;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.store:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
 /* The list of apps on the front page. */
 
 .apps {
@@ -242,6 +292,18 @@ code {
 
 .app-name em.dilse {
   color: #e4572e;
+}
+
+.app-name em.textrepeater {
+  color: #a78bff;
+}
+
+.app-name em.madeinindia {
+  color: #2fbf71;
+}
+
+.app-name em.motivational {
+  color: #f5b73d;
 }
 
 .app-what {
