@@ -24,6 +24,16 @@
   --accent-outline: #1e5f57;
 }
 
+.app-dilse {
+  --ink: #0b1020;
+  --ink-surface: #151d31;
+  --ink-line: #1f2942;
+  --accent: #e4572e;
+  --accent-dim: #f0724f;
+  --accent-tint: #2a1a18;
+  --accent-outline: #6b3223;
+}
+
 * {
   box-sizing: border-box;
 }
@@ -226,9 +236,12 @@ code {
 }
 
 .app-name em {
-  --accent: #00e5c7;
-  color: var(--accent);
+  color: #00e5c7;
   font-style: normal;
+}
+
+.app-name em.dilse {
+  color: #e4572e;
 }
 
 .app-what {
