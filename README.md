@@ -23,7 +23,12 @@ and URLs that stay valid for as long as the apps are listed.
 
 | App | Overview | Privacy policy |
 | --- | --- | --- |
+| SkillZora | [/skillzora/](https://diptendulkar.github.io/skillzora/) | [/skillzora/privacy-policy/](https://diptendulkar.github.io/skillzora/privacy-policy/) |
 | DocScan India | [/docscan/](https://diptendulkar.github.io/docscan/) | [/docscan/privacy-policy/](https://diptendulkar.github.io/docscan/privacy-policy/) |
+| Dilse | [/dilse/](https://diptendulkar.github.io/dilse/) | [/dilse/privacy-policy/](https://diptendulkar.github.io/dilse/privacy-policy/) |
+| Text Repeater | [/textrepeater/](https://diptendulkar.github.io/textrepeater/) | [/textrepeater/privacy-policy/](https://diptendulkar.github.io/textrepeater/privacy-policy/) |
+| Daily Motivational | [/motivational/](https://diptendulkar.github.io/motivational/) | [/motivational/privacy-policy/](https://diptendulkar.github.io/motivational/privacy-policy/) |
+| Made In India | [/madeinindia/](https://diptendulkar.github.io/madeinindia/) | [/madeinindia/privacy-policy/](https://diptendulkar.github.io/madeinindia/privacy-policy/) |
 
 ## Adding an app
 
