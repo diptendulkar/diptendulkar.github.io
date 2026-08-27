@@ -23,6 +23,7 @@ and URLs that stay valid for as long as the apps are listed.
 
 | App | Overview | Privacy policy |
 | --- | --- | --- |
+| Sthir | [/sthir/](https://diptendulkar.github.io/sthir/) | [/sthir/privacy-policy/](https://diptendulkar.github.io/sthir/privacy-policy/) |
 | SkillZora | [/skillzora/](https://diptendulkar.github.io/skillzora/) | [/skillzora/privacy-policy/](https://diptendulkar.github.io/skillzora/privacy-policy/) |
 | DocScan India | [/docscan/](https://diptendulkar.github.io/docscan/) | [/docscan/privacy-policy/](https://diptendulkar.github.io/docscan/privacy-policy/) |
 | Dilse | [/dilse/](https://diptendulkar.github.io/dilse/) | [/dilse/privacy-policy/](https://diptendulkar.github.io/dilse/privacy-policy/) |

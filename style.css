@@ -74,6 +74,16 @@
   --accent-outline: #6a4f1c;
 }
 
+.app-sthir {
+  --ink: #0a0c0a;
+  --ink-surface: #141813;
+  --ink-line: #222a21;
+  --accent: #93b48b;
+  --accent-dim: #7d9e75;
+  --accent-tint: #182116;
+  --accent-outline: #3c5138;
+}
+
 * {
   box-sizing: border-box;
 }
@@ -318,6 +328,10 @@ code {
 
 .app-name em.skillzora {
   color: #d9a64a;
+}
+
+.app-name em.sthir {
+  color: #93b48b;
 }
 
 .app-row {
