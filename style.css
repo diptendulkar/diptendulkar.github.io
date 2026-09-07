@@ -84,6 +84,19 @@
   --accent-outline: #3c5138;
 }
 
+/* Khayal's own palette is warm paper and a deep teal. This site is dark, so the accent here is the
+   lighter teal the app itself switches to in dark mode, rather than the #1F7A6B of the icon. */
+
+.app-khayal {
+  --ink: #0c100f;
+  --ink-surface: #171d1b;
+  --ink-line: #232c29;
+  --accent: #5fc2ae;
+  --accent-dim: #4aa896;
+  --accent-tint: #14241f;
+  --accent-outline: #2c5a50;
+}
+
 * {
   box-sizing: border-box;
 }
@@ -332,6 +345,10 @@ code {
 
 .app-name em.sthir {
   color: #93b48b;
+}
+
+.app-name em.khayal {
+  color: #5fc2ae;
 }
 
 .app-row {
