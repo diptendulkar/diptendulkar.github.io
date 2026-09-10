@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Play developer page header</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=IBM+Plex+Sans:wght@400;500&family=IBM+Plex+Mono:wght@500&display=swap" rel="stylesheet">
+<style>
+/* Google Play developer page header. Rendered at 4096x2304 by render.sh.
+ *
+ * The crop is the whole design problem here. Play sets object-fit:cover on this image and the
+ * container aspect ratio changes with the viewport:
+ *
+ *   desktop  ~2.97:1  → only the middle ~60% of the height survives
+ *   mobile    1.78:1  → the full image is shown
+ *
+ * So every word has to sit inside the middle band, while the full 16:9 frame still has to look
+ * composed rather than like a strip floating in empty space. That is why the copy lives in a
+ * centred safe zone and the background carries the top and bottom on its own.
+ *
+ * Nothing here is specific to one app. The previous header used DocScan's scan-corner brackets
+ * and "DOCUMENTS · PHOTOS · PAPERWORK", which described a single app on a page listing all of
+ * them. The tile row below stands for a catalogue of small apps without naming any, so adding an
+ * app does not date the image.
+ */
+:root {
+  --ink: #0a0d13;
+  --ink-2: #11151d;
+  --text: #eef2f8;
+  --text-2: #aeb8cc;
+  --text-3: #7c879c;
+  --line: #232935;
+
+  --s: 'Space Grotesk', sans-serif;
+  --b: 'IBM Plex Sans', sans-serif;
+  --m: 'IBM Plex Mono', monospace;
+
+  /* One per app, taken from the accents on diptendulkar.github.io so the page and the store
+     header agree. Order is deliberate: no two adjacent tiles share a hue family. */
+  --c1: #5fc2ae;  /* khayal   */
+  --c2: #e4572e;  /* dilse    */
+  --c3: #93b48b;  /* sthir    */
+  --c4: #a78bff;  /* textrepeater */
+  --c5: #d9a64a;  /* skillzora */
+  --c6: #00e5c7;  /* docscan  */
+  --c7: #f5b73d;  /* motivational */
+  --c8: #2fbf71;  /* madeinindia */
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+html, body {
+  width: 4096px;
+  height: 2304px;
+  overflow: hidden;
+}
+
+body {
+  background: var(--ink);
+  font-family: var(--b);
+  -webkit-font-smoothing: antialiased;
+}
+
+.frame {
+  position: relative;
+  width: 4096px;
+  height: 2304px;
+  overflow: hidden;
+}
+
+/* Background. Two wide, very soft washes pulled from the palette, so the full 16:9 frame has
+   something happening at the top and bottom that the desktop crop can throw away without the
+   design losing anything. No hard edges anywhere near a crop line. */
+.wash {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(260px);
+  opacity: 0.62;
+}
+.wash-a {
+  width: 2600px; height: 1900px;
+  left: -460px; top: -480px;
+  background: #17708f;
+}
+.wash-b {
+  width: 2800px; height: 2000px;
+  right: -560px; bottom: -560px;
+  background: #1f7d5c;
+}
+.wash-c {
+  width: 1800px; height: 1400px;
+  left: 44%; top: 26%;
+  background: #6046ad;
+  opacity: 0.42;
+}
+/* A warm point on the left, so the palette is not only cool. Small and low, well outside the
+   wordmark's contrast area. */
+.wash-d {
+  width: 1200px; height: 1000px;
+  left: 6%; bottom: -280px;
+  background: #b85a2a;
+  opacity: 0.34;
+}
+
+/* A faint grid. Reads as "tools, built carefully" without belonging to any one category. */
+.grid {
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(to right, rgba(255,255,255,0.055) 2px, transparent 2px),
+    linear-gradient(to bottom, rgba(255,255,255,0.055) 2px, transparent 2px);
+  background-size: 160px 160px;
+  mask-image: radial-gradient(ellipse 68% 58% at 50% 50%, #000 35%, transparent 78%);
+  -webkit-mask-image: radial-gradient(ellipse 68% 58% at 50% 50%, #000 35%, transparent 78%);
+}
+
+/* Keeps the centre legible over the washes. */
+.vignette {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse 58% 60% at 50% 50%, rgba(10,13,19,0.80) 0%, rgba(10,13,19,0.42) 52%, transparent 100%);
+}
+
+/* ---- Safe zone -------------------------------------------------------------------------
+ * The desktop crop keeps the middle 60% of 2304px, i.e. y 461..1843. Everything that carries
+ * meaning stays inside a tighter middle 52% (y 553..1751) so there is margin for Play changing
+ * the container ratio slightly.
+ */
+.safe {
+  position: absolute;
+  left: 0;
+  top: 553px;
+  width: 4096px;
+  height: 1198px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0;
+  text-align: center;
+}
+
+.eyebrow {
+  font-family: var(--m);
+  font-weight: 500;
+  font-size: 46px;
+  letter-spacing: 0.44em;
+  text-indent: 0.44em;
+  color: var(--text-3);
+  margin-bottom: 54px;
+}
+
+.wordmark {
+  font-family: var(--s);
+  font-weight: 700;
+  font-size: 340px;
+  line-height: 0.94;
+  letter-spacing: -0.022em;
+  color: var(--text);
+}
+/* The two words are weighted differently so the lockup still reads as one mark when the image is
+   scaled down to a few hundred pixels wide in search results. */
+.wordmark em {
+  font-style: normal;
+  font-weight: 500;
+  color: var(--text-2);
+}
+
+.tagline {
+  font-family: var(--b);
+  font-weight: 400;
+  font-size: 92px;
+  line-height: 1.3;
+  color: var(--text-2);
+  margin-top: 46px;
+}
+
+/* The tile row. Eight rounded app-tile silhouettes in the site's per-app accents: a catalogue,
+   not a product. Unlabelled on purpose — a new app joins the family without invalidating this
+   image, and no single category gets to speak for the rest. */
+.tiles {
+  display: flex;
+  gap: 48px;
+  margin-top: 96px;
+}
+.tile {
+  width: 132px;
+  height: 132px;
+  border-radius: 36px;
+  opacity: 0.95;
+  box-shadow: 0 18px 60px rgba(0,0,0,0.42);
+}
+.tile:nth-child(1) { background: var(--c1); }
+.tile:nth-child(2) { background: var(--c2); }
+.tile:nth-child(3) { background: var(--c3); }
+.tile:nth-child(4) { background: var(--c4); }
+.tile:nth-child(5) { background: var(--c5); }
+.tile:nth-child(6) { background: var(--c6); }
+.tile:nth-child(7) { background: var(--c7); }
+.tile:nth-child(8) { background: var(--c8); }
+/* A ninth, empty slot: room for whatever is built next. */
+.tile.next {
+  background: transparent;
+  border: 3px dashed rgba(174,184,204,0.42);
+  opacity: 0.85;
+}
+
+.chips {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  margin-top: 92px;
+  font-family: var(--m);
+  font-weight: 500;
+  font-size: 44px;
+  letter-spacing: 0.20em;
+  color: var(--text-3);
+}
+.dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: var(--text-3);
+  opacity: 0.55;
+}
+</style>
+</head>
+<body>
+<div class="frame">
+  <div class="wash wash-a"></div>
+  <div class="wash wash-b"></div>
+  <div class="wash wash-c"></div>
+  <div class="wash wash-d"></div>
+  <div class="grid"></div>
+  <div class="vignette"></div>
+
+  <div class="safe">
+    <div class="eyebrow">ANDROID APPS</div>
+
+    <div class="wordmark">Saral&nbsp;<em>Labs</em></div>
+
+    <div class="tagline">Small, careful apps for everyday India.</div>
+
+    <div class="tiles">
+      <div class="tile"></div>
+      <div class="tile"></div>
+      <div class="tile"></div>
+      <div class="tile"></div>
+      <div class="tile"></div>
+      <div class="tile"></div>
+      <div class="tile"></div>
+      <div class="tile"></div>
+      <div class="tile next"></div>
+    </div>
+
+    <div class="chips">
+      <span>NO ACCOUNTS</span>
+      <span class="dot"></span>
+      <span>NO CLUTTER</span>
+      <span class="dot"></span>
+      <span>MADE IN INDIA</span>
+    </div>
+  </div>
+</div>
+</body>
+</html>
