@@ -50,3 +50,14 @@ an app does not date the image, and no single category speaks for the rest.
 
 If you do add an app and want its colour in the row, add a `--c9` and a `.tile:nth-child(9)` rule
 and move the dashed tile along.
+
+## The developer icon
+
+`developer-icon-512.png`, uploaded in the same section. 512 × 512, no alpha, under 1 MB — PNG is
+fine at this size and avoids JPEG artefacts around the glyph.
+
+Play masks it to a **circle**, so the usable area is the inscribed square: 512/√2 ≈ 362px. It is
+also normally seen at around 48px, on the developer page and in search. Between those two facts
+there is room for exactly one glyph on a ground, which is why it is a single "S" over the same
+washes as the header rather than anything with structure in it. A 2×2 colour grid was tried and
+dropped: illegible at 48px, and indistinguishable from every other "apps" mark.

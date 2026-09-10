@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Play developer icon</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@700&display=swap" rel="stylesheet">
+<style>
+/* Google Play developer icon. Rendered at 512x512 by render.sh.
+ *
+ * Two constraints shape this more than taste does:
+ *
+ * 1. Play masks it to a CIRCLE. The corners are thrown away, so the inscribed square is only
+ *    512/sqrt(2) = 362px. Anything meaningful has to live well inside that.
+ * 2. It is usually seen small — around 48px on the developer page and in search. Detail that
+ *    reads at 512 turns to mush there, which is why this is one glyph on a ground and nothing
+ *    else. An earlier idea of a 2x2 colour grid was dropped for being both illegible at 48px and
+ *    indistinguishable from every other "apps" mark.
+ *
+ * The ground and washes are lifted from developer-header.html on purpose: the icon renders
+ * directly beneath the header on the developer page, so the two are read together. The previous
+ * icon was DocScan's orange-pink gradient with that app's scan-corner brackets, which made the
+ * whole account look like a single scanning app.
+ */
+:root {
+  --ink: #0a0d13;
+  --text: #eef2f8;
+  --s: 'Space Grotesk', sans-serif;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+html, body {
+  width: 512px;
+  height: 512px;
+  overflow: hidden;
+}
+
+body {
+  background: var(--ink);
+  -webkit-font-smoothing: antialiased;
+}
+
+.frame {
+  position: relative;
+  width: 512px;
+  height: 512px;
+  overflow: hidden;
+  background: var(--ink);
+}
+
+/* Same palette as the header, scaled down. Kept away from the centre so the glyph always has a
+   dark, high-contrast ground behind it rather than sitting on a mid-tone. */
+.wash {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(90px);
+}
+.wash-a {
+  width: 420px; height: 360px;
+  left: -110px; top: -120px;
+  background: #17708f;
+  opacity: 0.80;
+}
+.wash-b {
+  width: 440px; height: 380px;
+  right: -130px; bottom: -130px;
+  background: #1f7d5c;
+  opacity: 0.78;
+}
+.wash-c {
+  width: 300px; height: 260px;
+  right: -60px; top: -70px;
+  background: #6046ad;
+  opacity: 0.55;
+}
+.wash-d {
+  width: 260px; height: 240px;
+  left: -70px; bottom: -80px;
+  background: #b85a2a;
+  opacity: 0.45;
+}
+
+.vignette {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at 50% 50%, rgba(10,13,19,0.86) 0%, rgba(10,13,19,0.52) 46%, transparent 72%);
+}
+
+.glyph {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--s);
+  font-weight: 700;
+  /* Sized against the 362px circle-safe square, not the 512px canvas. */
+  font-size: 306px;
+  line-height: 1;
+  letter-spacing: -0.03em;
+  color: var(--text);
+  /* Nudged up by the optical overshoot of the S so it sits centred in the circular mask. */
+  padding-bottom: 14px;
+  text-shadow: 0 10px 40px rgba(0,0,0,0.45);
+}
+</style>
+</head>
+<body>
+<div class="frame">
+  <div class="wash wash-a"></div>
+  <div class="wash wash-b"></div>
+  <div class="wash wash-c"></div>
+  <div class="wash wash-d"></div>
+  <div class="vignette"></div>
+  <div class="glyph">S</div>
+</div>
+</body>
+</html>

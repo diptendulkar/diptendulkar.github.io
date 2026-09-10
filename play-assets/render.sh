@@ -43,4 +43,8 @@ cp "$SRC/developer-header-4096x2304.png" "$SRC/developer-header-4096x2304.jpg"
 sips -s format jpeg -s formatOptions "$JPEG_QUALITY" "$SRC/developer-header-4096x2304.jpg" >/dev/null
 echo "  developer-header-4096x2304.jpg  4096x2304  $(du -h "$SRC/developer-header-4096x2304.jpg" | cut -f1)  (q$JPEG_QUALITY, this is the file to upload)"
 
+# The icon is small enough that PNG stays far under the 1 MB limit, so it is uploaded as-is and
+# avoids putting JPEG artefacts around the glyph edges.
+shoot "file://$SRC/developer-icon.html" 512 512 "$SRC/developer-icon-512.png"
+
 echo "Done."
