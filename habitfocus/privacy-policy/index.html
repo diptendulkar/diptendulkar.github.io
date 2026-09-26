@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en" class="app-habitfocus">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Privacy Policy — HabitFocus</title>
+<meta name="description" content="What HabitFocus keeps on your phone, why your habits, goals and screen time are never uploaded, and what Google advertising in the app may collect.">
+<link rel="stylesheet" href="../../style.css">
+</head>
+<body>
+<div class="wrap">
+
+<header class="site">
+  <a class="crumb" href="../../">← Apps by Diptendu</a>
+  <a class="wordmark" href="../">Habit<span>Focus</span></a>
+  <div class="badge">Free · Habits and focus, on-device</div>
+</header>
+
+<h1>Privacy Policy</h1>
+<p class="updated">Last updated: 26 September 2026</p>
+
+<p class="lede">HabitFocus (&ldquo;the app&rdquo;) is a free Android habit and focus app, published
+as <code>com.dip.habitfocus</code>. This policy explains what stays on your phone, what advertising
+software may collect, and how to contact us.</p>
+
+<h2>The short version</h2>
+<p>Everything you create in HabitFocus &mdash; habits, check-ins, momentum, goals and milestones,
+focus sessions, scheduled focus windows and screen-time history &mdash; stays on the device. There is
+no HabitFocus server and you have no account. None of it is uploaded.</p>
+<p>The app shows one ad (Google AdMob) on the Stats screen. That service is operated by Google, not
+by us. We do not sell your information.</p>
+
+<h2>What we store on the phone</h2>
+<ul>
+  <li><strong>Your habits, check-ins, momentum, goals, milestones, focus sessions and focus
+      windows</strong> are kept in a database in the app&rsquo;s private storage. Other apps cannot
+      read it. Uninstalling deletes it, which is why Settings offers an export file you save
+      yourself.</li>
+  <li><strong>Pictures you add to a goal.</strong> You choose one with Android&rsquo;s photo picker,
+      so the app never gets access to the rest of your photos. It keeps a copy of that one picture in
+      its private storage to show on the goal. The copy never leaves the phone and is not included in
+      the export file.</li>
+  <li><strong>Screen-time history</strong>, if you grant usage access, is stored on the phone to show
+      trends.</li>
+</ul>
+
+<h2>Where the screen-time data comes from</h2>
+<p>HabitFocus reads Android&rsquo;s Usage Stats API only after you grant usage access in system
+settings, and only for the Screen time tab; the rest of the app works without it. The app uses
+<strong>no accessibility service</strong> and <strong>no VPN</strong>. It does not read the contents
+of your screen, your notifications, your messages or your network traffic.</p>
+
+<h2>Focus sessions and the pause screen</h2>
+<p>To let you pick which apps to pause, the app asks Android for the list of apps with a launcher
+icon. If you grant <em>display over other apps</em>, it shows a dismissible reminder when you open one
+of those apps during a session. It only knows which app came to the foreground; it cannot see
+anything inside it. Without that permission, sessions run as a plain timer.</p>
+
+<h2>Notifications and scheduled windows</h2>
+<p>Reminders you set, and focus windows you schedule, are delivered by your phone. If you grant
+<em>Alarms and reminders</em>, they arrive at the minute you chose; otherwise Android may deliver them
+late. A running focus session shows a notification while it lasts. Nothing about any of this is sent
+anywhere.</p>
+
+<h2>Advertising</h2>
+<p>The app uses Google Mobile Ads (AdMob), with Google&rsquo;s User Messaging Platform (UMP) for
+consent.</p>
+<ul>
+  <li>One native ad may appear on the Stats screen. There are no ads for the first three days after
+      install, and never on the Today screen, on goal pages, during a focus session, on the pause
+      screen, on the celebration screen, during onboarding, or in any notification or widget.</li>
+  <li>There are no full-screen ads, no ads that open when you launch the app, and no rewarded
+      ads.</li>
+  <li>Google may use an advertising identifier, approximate location derived from your IP address,
+      device and network information, and your interaction with ads, as described in
+      <a href="https://policies.google.com/technologies/ads">Google&rsquo;s advertising privacy
+      policy</a>.</li>
+  <li>Where required, including the EEA, the UK and Switzerland, UMP asks for your consent before
+      personalised ads are shown. You can change your choice from Settings in the app, and reset
+      your advertising identifier in Android Settings &rarr; Privacy &rarr; Ads.</li>
+  <li><strong>Your habits, goals and screen time are never sent to Google or used to target
+      ads.</strong> The ad request carries no data from inside this app.</li>
+</ul>
+<p>Debug builds of the app use Google&rsquo;s sample ad units and never request live ads.</p>
+
+<h2>Analytics</h2>
+<p>The app contains no analytics software of our own. We do not measure which screens you open.</p>
+
+<h2>Export</h2>
+<p>If you export a backup, you choose where it is saved through the system file picker. We do not
+upload it and we never see it.</p>
+
+<h2>Permissions</h2>
+<table>
+  <thead>
+    <tr><th>Permission</th><th>Why</th></tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code>PACKAGE_USAGE_STATS</code></td>
+      <td>Usage access, granted by you in system settings, for the Screen time tab. Read on-device
+          only. Optional.</td>
+    </tr>
+    <tr>
+      <td><code>SYSTEM_ALERT_WINDOW</code></td>
+      <td>Shows the dismissible pause reminder during a focus session you started or scheduled.
+          Optional.</td>
+    </tr>
+    <tr>
+      <td><code>FOREGROUND_SERVICE</code>, <code>FOREGROUND_SERVICE_SPECIAL_USE</code></td>
+      <td>Keeps a focus session&rsquo;s countdown and pause screen working after you leave the app.
+          Runs only while a session is on.</td>
+    </tr>
+    <tr>
+      <td><code>POST_NOTIFICATIONS</code></td>
+      <td>Habit reminders, the running session&rsquo;s notification, and a one-tap start if a
+          scheduled window could not begin by itself.</td>
+    </tr>
+    <tr>
+      <td><code>SCHEDULE_EXACT_ALARM</code>, <code>WAKE_LOCK</code>, <code>VIBRATE</code></td>
+      <td>To deliver a reminder or start a focus window at the time you chose. <code>WAKE_LOCK</code>
+          is added by Android&rsquo;s background-work library.</td>
+    </tr>
+    <tr>
+      <td><code>RECEIVE_BOOT_COMPLETED</code></td>
+      <td>To restore reminders and focus windows after a reboot.</td>
+    </tr>
+    <tr>
+      <td><code>INTERNET</code>, <code>ACCESS_NETWORK_STATE</code></td>
+      <td>Only to load the ad described above. None of your data is sent over it.</td>
+    </tr>
+    <tr>
+      <td><code>AD_ID</code></td>
+      <td>So AdMob can use the advertising identifier where you have allowed it.</td>
+    </tr>
+    <tr>
+      <td><code>ACCESS_ADSERVICES_AD_ID</code>, <code>ACCESS_ADSERVICES_ATTRIBUTION</code>,
+          <code>ACCESS_ADSERVICES_TOPICS</code></td>
+      <td>Added by the Google Mobile Ads library for Android&rsquo;s Privacy Sandbox. Used by
+          Google&rsquo;s ad serving, not by any code of ours.</td>
+    </tr>
+  </tbody>
+</table>
+<p>The app does not ask for contacts, SMS, location, camera, microphone, or access to your photos or
+files.</p>
+
+<h2>Not a monitoring app</h2>
+<p>HabitFocus is a self-directed tool. It reports only to the person holding the phone, and there is
+no way to send its data to anyone else. It is not a parental-control, employee-monitoring or
+surveillance product.</p>
+
+<h2>Children</h2>
+<p>HabitFocus is not directed at children under 13, and we do not knowingly collect personal
+information from children.</p>
+
+<h2>Changes to this policy</h2>
+<p>This policy is published here. If it changes, this page is updated and the date above changes with
+it. Material changes will also be noted in the app&rsquo;s release notes on Google Play.</p>
+
+<h2>Contact</h2>
+<p>Questions about this policy or about privacy in the app: please open an issue at
+<a href="https://github.com/diptendulkar/diptendulkar.github.io/issues">github.com/diptendulkar/diptendulkar.github.io/issues</a>.</p>
+
+<footer class="site">
+  <a href="../../">Apps by Diptendu</a> &middot; <a href="../">HabitFocus</a>
+</footer>
+
+</div>
+</body>
+</html>

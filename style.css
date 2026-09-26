@@ -97,6 +97,19 @@
   --accent-outline: #2c5a50;
 }
 
+/* HabitFocus's coral is #F0634A. Lifted a little here so it reads on the dark site and sits apart
+   from Dilse's deeper red-orange. */
+
+.app-habitfocus {
+  --ink: #0f0e0d;
+  --ink-surface: #1a1816;
+  --ink-line: #292623;
+  --accent: #f47c66;
+  --accent-dim: #e0654f;
+  --accent-tint: #2a1a16;
+  --accent-outline: #6b3428;
+}
+
 * {
   box-sizing: border-box;
 }
@@ -349,6 +362,10 @@ code {
 
 .app-name em.khayal {
   color: #5fc2ae;
+}
+
+.app-name em.habitfocus {
+  color: #f47c66;
 }
 
 .app-row {
