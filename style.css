@@ -110,6 +110,18 @@
   --accent-outline: #6b3428;
 }
 
+/* ClipQ's coral is #E96851 on a warm near-black #141311. */
+
+.app-clipq {
+  --ink: #141311;
+  --ink-surface: #1e1c1a;
+  --ink-line: #2d2a27;
+  --accent: #ef7a64;
+  --accent-dim: #e96851;
+  --accent-tint: #2b1b17;
+  --accent-outline: #6e3a2e;
+}
+
 * {
   box-sizing: border-box;
 }
@@ -366,6 +378,10 @@ code {
 
 .app-name em.habitfocus {
   color: #f47c66;
+}
+
+.app-name em.clipq {
+  color: #ef7a64;
 }
 
 .app-row {
