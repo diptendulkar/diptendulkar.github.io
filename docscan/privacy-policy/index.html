@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Privacy Policy — DocScan India</title>
-<meta name="description" content="DocScan India keeps your documents on your phone. No server, no account, no analytics, no ads.">
+<meta name="description" content="DocScan India keeps your documents on your phone. No server, no account, no ads, and nothing from a document is ever sent.">
 <link rel="stylesheet" href="../../style.css">
 </head>
 <body>
@@ -17,7 +17,7 @@
 </header>
 
 <h1>Privacy Policy</h1>
-<p class="updated">Last updated: 28 September 2026</p>
+<p class="updated">Last updated: 5 October 2026</p>
 
 <p class="lede">DocScan India (&ldquo;the app&rdquo;) is a document scanner that runs on your phone. This
 policy explains, in plain terms, what happens to your documents and what data the app does and does
@@ -26,8 +26,9 @@ not collect.</p>
 <h2>The short version</h2>
 <p>Your documents never leave your device. We operate no server, you have no account, and there is
 nothing to log in to. We cannot see your scans, because they are never sent anywhere.</p>
-<p>The app shows no ads, contains no advertising or analytics software, and sells nothing. Every
-feature is included, with nothing to buy or unlock.</p>
+<p>The app shows no ads, contains no advertising software, and sells nothing. Every feature is
+included, with nothing to buy or unlock. It does count which screens and features are used, through
+Google Analytics, so we know what to improve first &mdash; never what is in a document.</p>
 
 <h2>Your documents and scans</h2>
 <p>Everything to do with your documents happens on your device:</p>
@@ -47,26 +48,39 @@ feature is included, with nothing to buy or unlock.</p>
 <p>We have no copy of any of it, and no way to obtain one.</p>
 
 <h2>Data we collect</h2>
-<p>None. We collect no personal information, no account details, no contact information, no
-analytics, no crash reports and no usage statistics. There is no advertising software in the app and
-no advertising identifier is read. We do not build a profile of you.</p>
+<p>Only feature usage, described below. We collect no personal information, no account details, no
+contact information and no crash reports. There is no advertising software in the app and no
+advertising identifier is read. We do not build a profile of you.</p>
+
+<h2>Usage analytics</h2>
+<p>The app uses Google Analytics for Firebase to count which screens are opened and which features
+are used &mdash; for example &ldquo;a scan was started&rdquo;, &ldquo;a PDF was exported&rdquo; or
+&ldquo;two PDFs were merged&rdquo; &mdash; so we know which parts of the app to improve first. With
+each event Google also records the app version, the phone model, the Android version, the language,
+an approximate country derived from the IP address, and a random identifier for this installation of
+the app.</p>
+<p>Analytics never receives a document, an image, recognised text, a document or file name, the
+content of a QR code or barcode, or anything you type. Collection of the advertising identifier and
+ad personalisation are both switched off. Google processes these events on our behalf as described
+in <a href="https://firebase.google.com/support/privacy">Firebase privacy and security</a> and keeps
+them for a limited time. Clearing the app&rsquo;s data in Android settings resets the installation
+identifier.</p>
 
 <h2>What Google&rsquo;s on-device scanning components do</h2>
 <p>The app uses Google ML Kit for document capture, text recognition, reading QR codes and barcodes,
-and &mdash; when you ask it to change the background of a passport photo &mdash; for telling a person
-apart from the wall behind them. All of them run on your device and never send your images, your
-face, the recognised text or the content of a code anywhere. The background and code-reading models
-are built into the app rather than downloaded, so they work with no network at all.</p>
+and &mdash; when you ask it to change the background of a passport photo &mdash; for telling a
+person apart from the wall behind them. All of them run on your device and never send your images,
+your face, the recognised text or the content of a code anywhere. The background and code-reading
+models are built into the app rather than downloaded, so they work with no network at all.</p>
 <p>We want to be precise about one thing rather than overclaim. ML Kit reports diagnostic metrics
 about itself to Google &mdash; for example how long a scan took and whether it succeeded &mdash; as
 described in Google&rsquo;s
-<a href="https://developers.google.com/ml-kit/android-data-disclosure">ML Kit data disclosure</a> and
-<a href="https://developers.google.com/ml-kit/terms">ML Kit terms</a>. That telemetry is about the
-scanning components, not about you, and it never includes your documents, your images or the text
-found in them. Google provides no option for an app to switch it off.</p>
-<p>This is also why the installed app still lists the <code>INTERNET</code> permission even though our
-own code makes no network requests of any kind: the permission is contributed by those Google
-components, not declared by us.</p>
+<a href="https://developers.google.com/ml-kit/android-data-disclosure">ML Kit data disclosure</a>
+and <a href="https://developers.google.com/ml-kit/terms">ML Kit terms</a>. That telemetry is about
+the scanning components, not about you, and it never includes your documents, your images or the
+text found in them. Google provides no option for an app to switch it off.</p>
+<p>The installed app lists the <code>INTERNET</code> permission for those Google components and for
+the usage analytics above. Neither sends your documents anywhere.</p>
 
 <h2>QR codes and barcodes</h2>
 <ul>
@@ -114,8 +128,8 @@ contains no billing software.</p>
   <tbody>
     <tr>
       <td><code>CAMERA</code></td>
-      <td>To photograph documents, to take a passport photo if you choose that instead of picking one,
-          and to read QR codes and barcodes. Images go straight into on-device processing.</td>
+      <td>To photograph documents, to take a passport photo if you choose that instead of picking
+          one, and to read QR codes and barcodes. Images go straight into on-device processing.</td>
     </tr>
     <tr>
       <td><code>USE_BIOMETRIC</code>, <code>USE_FINGERPRINT</code></td>
@@ -123,18 +137,19 @@ contains no billing software.</p>
     </tr>
     <tr>
       <td><code>INTERNET</code>, <code>ACCESS_NETWORK_STATE</code></td>
-      <td>Not declared by us. Added by Google&rsquo;s ML Kit components and by Android&rsquo;s
-          background-work library. Our code makes no network requests.</td>
+      <td>For the usage analytics described above, and for Google&rsquo;s ML Kit components and
+          Android&rsquo;s background-work library. Documents are never sent.</td>
     </tr>
     <tr>
-      <td><code>WAKE_LOCK</code>, <code>FOREGROUND_SERVICE</code>, <code>RECEIVE_BOOT_COMPLETED</code></td>
+      <td><code>WAKE_LOCK</code>, <code>FOREGROUND_SERVICE</code>,
+          <code>RECEIVE_BOOT_COMPLETED</code></td>
       <td>Not declared by us either. Added by Android&rsquo;s background-work library, which the app
           uses to finish exporting a large document if you leave the screen.</td>
     </tr>
   </tbody>
 </table>
-<p>The app requests no storage permissions. Saving uses Android&rsquo;s system file picker, so it only
-ever writes where you point it.</p>
+<p>The app requests no storage permissions. Saving uses Android&rsquo;s system file picker, so it
+only ever writes where you point it.</p>
 
 <h2>App lock</h2>
 <p>Because people keep identity documents in a scanner app, the app offers an optional lock using

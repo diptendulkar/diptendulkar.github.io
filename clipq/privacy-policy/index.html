@@ -17,14 +17,15 @@
 </header>
 
 <h1>Privacy Policy</h1>
-<p class="updated">Last updated: 4 October 2026</p>
+<p class="updated">Last updated: 5 October 2026</p>
 
 <p class="lede">ClipQ (&ldquo;the app&rdquo;) is an Android video editor made by Saral Labs,
 published as <code>com.dip.clipq</code>. This policy explains what the app does with your data.</p>
 
 <h2>The short version</h2>
 <p>Your photos, videos, music and voice recordings never leave your phone. ClipQ has no account, no
-server, no ads, no analytics and no internet permission of its own.</p>
+server of its own and no ads. It counts which screens and tools are used, through Google Analytics,
+so we know what to improve first.</p>
 
 <h2>What ClipQ reads</h2>
 <ul>
@@ -60,15 +61,37 @@ yours to keep, share or delete like any other video.</p>
 ClipQ removes all of it except the videos you saved to your gallery.</p>
 
 <h2>What ClipQ sends over the internet</h2>
-<p><strong>Nothing about you or your media.</strong> All editing, beat detection, filters, voice
-effects and exporting happen on your phone.</p>
-<p>The only network use comes from Google Play services: Google Play checks whether a newer version
-of ClipQ is available, and may show Play&rsquo;s rating sheet. Google handles this under
+<p><strong>Nothing from your media.</strong> All editing, beat detection, filters, voice effects
+and exporting happen on your phone, and work with no connection. ClipQ shows no ads.</p>
+<p><strong>Usage analytics.</strong> Which screens and tools are used, described in the next
+section.</p>
+<p><strong>Diagnostics from Google&rsquo;s on-phone components.</strong> Google&rsquo;s ML Kit, which
+finds the person for background removal and the cutout collage, reports metrics about itself to
+Google, such as how long it took and whether it worked, as described in
+<a href="https://developers.google.com/ml-kit/android-data-disclosure">ML Kit&rsquo;s data
+disclosure</a>. It never sends your photos or videos.</p>
+<p><strong>In-app updates and reviews.</strong> Google Play checks whether a newer version of ClipQ
+is available, and may show Play&rsquo;s rating sheet. Google handles this under
 <a href="https://policies.google.com/privacy">Google&rsquo;s privacy policy</a>.</p>
 <p><strong>Optional caption download.</strong> When you choose to download auto captions, Google
 Play downloads them to your phone. After that, captions are made on your phone: your audio is
 never sent anywhere. Google Play services may
 likewise download the on-phone model that finds objects in a photo for background removal.</p>
+<p>ClipQ has no account, no sign-in, and no crash reporting service of its own.</p>
+
+<h2>Usage analytics</h2>
+<p>ClipQ uses Google Analytics for Firebase to count which screens are opened and which tools are
+used &mdash; for example &ldquo;the Blend panel was opened&rdquo;, &ldquo;a 1080p video was
+saved&rdquo; or &ldquo;a sticker was added&rdquo; &mdash; so we know which features to improve first.
+With each event Google also records the app version, the phone model, the Android version, the
+language, an approximate country derived from the IP address, and a random identifier for this
+installation of the app.</p>
+<p>Analytics never receives a photo, a video, a voice recording, a song, a caption, any text you
+type, or a file or project name. Collection of the advertising identifier and ad personalisation are
+both switched off. Google processes these events on our behalf as described in
+<a href="https://firebase.google.com/support/privacy">Firebase privacy and security</a> and keeps
+them for a limited time. Clearing ClipQ&rsquo;s data in Android settings resets the installation
+identifier.</p>
 
 <h2>Backups</h2>
 <p>ClipQ opts out of Android cloud backup for its projects and files, because drafts point to media
@@ -77,6 +100,8 @@ file</strong> to create a <code>.clipq</code> file, which you control.</p>
 
 <h2>Permissions</h2>
 <ul>
+  <li><strong>Internet</strong> sends the usage analytics and Google component diagnostics described
+      above. Editing and saving never need it.</li>
   <li><strong>Microphone</strong> records voiceovers and the sound of teleprompter takes, only while
       you are recording. ClipQ asks the first time you tap record or open the teleprompter, and
       every other feature works without it.</li>
@@ -92,7 +117,8 @@ file</strong> to create a <code>.clipq</code> file, which you control.</p>
 </ul>
 
 <h2>Children</h2>
-<p>ClipQ is not directed at children under 13 and collects no personal information from anyone.</p>
+<p>ClipQ is not directed at children under 13 and does not knowingly collect personal information
+from children.</p>
 
 <h2>Changes</h2>
 <p>If this policy changes, the new version will be published at this address, with a new date

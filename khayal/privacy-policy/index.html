@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Privacy Policy — Khayal</title>
-<meta name="description" content="What Khayal keeps on your phone, why no health data is ever uploaded, why its ads are always non-personalised, and what Google advertising may collect.">
+<meta name="description" content="What Khayal keeps on your phone, why no health data is ever uploaded, why its ads are always non-personalised, and what Google advertising and analytics may collect.">
 <link rel="stylesheet" href="../../style.css">
 </head>
 <body>
@@ -17,7 +17,7 @@
 </header>
 
 <h1>Privacy Policy</h1>
-<p class="updated">Last updated: 7 September 2026</p>
+<p class="updated">Last updated: 5 October 2026</p>
 
 <p class="lede">Khayal (&ldquo;the app&rdquo;) is a free Android medicine reminder and care tracker,
 published as <code>com.dip.khayal</code> by Saral Labs Indian Apps (developer: Diptendu Das). This
@@ -34,6 +34,8 @@ ours, and nothing you enter is uploaded anywhere.</p>
 <p>The one exception is advertising: Khayal shows ads from Google AdMob, which needs a connection and
 collects the things described below. That service is operated by Google, not by us. Ads in Khayal are
 always non-personalised. We do not sell your information.</p>
+<p>Khayal also counts which screens and features are used, through Google Analytics, so we know what
+to improve first &mdash; never anything you enter.</p>
 
 <h2>What Khayal stores on your device</h2>
 <ul>
@@ -79,8 +81,20 @@ deletes all of it, which is why the app asks you to acknowledge that on first la
 </ul>
 <p>Debug builds of the app use Google&rsquo;s sample ad units and never request live ads.</p>
 
-<h2>Analytics</h2>
-<p>The app contains no analytics software of our own. We do not measure which screens you open.</p>
+<h2>Usage analytics</h2>
+<p>Khayal uses Google Analytics for Firebase to count which screens are opened and which features
+are used &mdash; for example &ldquo;a medicine was added&rdquo;, &ldquo;a dose was marked as
+given&rdquo; or &ldquo;a doctor chart was exported&rdquo; &mdash; so we know which parts of the app
+to improve first. With each event Google also records the app version, the phone model, the Android
+version, the language, an approximate country derived from the IP address, and a random identifier
+for this installation of the app.</p>
+<p>Analytics never receives a name, an age, a medicine, a strength, a dose time, a vital reading, an
+appointment, a note or a photograph. Collection of the advertising identifier and ad personalisation
+are both switched off for analytics. Google processes these events on our behalf as described in
+<a href="https://firebase.google.com/support/privacy">Firebase privacy and security</a> and keeps
+them for a limited time. Clearing Khayal&rsquo;s data in Android settings resets the installation
+identifier &mdash; but it also deletes everything you have entered, so export a doctor chart
+first.</p>
 
 <h2>Permissions</h2>
 <table>
@@ -90,7 +104,8 @@ deletes all of it, which is why the app asks you to acknowledge that on first la
   <tbody>
     <tr>
       <td><code>INTERNET</code>, <code>ACCESS_NETWORK_STATE</code></td>
-      <td>Only to fetch the ads described above. No health data travels over it.</td>
+      <td>To fetch the ads and send the usage analytics described above. No health data travels over
+          it.</td>
     </tr>
     <tr>
       <td><code>POST_NOTIFICATIONS</code></td>

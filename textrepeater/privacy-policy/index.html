@@ -26,8 +26,9 @@ on your phone, what the advertising software in the app may collect, and how to 
 <h2>The short version</h2>
 <p>The text you type is transformed on the device. We run no backend, you have no account, and we
 never receive what you write.</p>
-<p>The app does show ads (Google AdMob). That service is operated by Google, not by us. We do not
-sell your information.</p>
+<p>The app does show ads (Google AdMob). That service is operated by Google, not by us. It also
+counts which tools are used, through Google Analytics, but never what you type. We do not sell your
+information.</p>
 
 <h2>The text you type</h2>
 <ul>
@@ -56,9 +57,19 @@ consent.</p>
 </ul>
 <p>Debug builds of the app use Google&rsquo;s sample ad units and never request live ads.</p>
 
-<h2>Analytics</h2>
-<p>The app contains no analytics software. We do not measure which tools you use or how often you
-open the app.</p>
+<h2>Usage analytics</h2>
+<p>The app uses Google Analytics for Firebase to count which tools are opened and how often text is
+copied or shared &mdash; for example &ldquo;the fancy fonts screen was opened&rdquo; or &ldquo;text
+was shared to WhatsApp&rdquo; &mdash; so we know which tools to improve first. With each event
+Google also records the app version, the phone model, the Android version, the language, an
+approximate country derived from the IP address, and a random identifier for this installation of
+the app.</p>
+<p>Analytics never receives the text you type, repeat, style, copy or share. Collection of the
+advertising identifier and ad personalisation are both switched off for analytics. Google processes
+these events on our behalf as described in
+<a href="https://firebase.google.com/support/privacy">Firebase privacy and security</a> and keeps
+them for a limited time. Clearing the app&rsquo;s data in Android settings resets the installation
+identifier.</p>
 
 <h2>Permissions</h2>
 <table>
@@ -68,11 +79,11 @@ open the app.</p>
   <tbody>
     <tr>
       <td><code>INTERNET</code></td>
-      <td>To load ads. No other part of the app uses the network.</td>
+      <td>To load ads and send the usage analytics described above.</td>
     </tr>
     <tr>
       <td><code>ACCESS_NETWORK_STATE</code></td>
-      <td>So the ads library can tell whether the device is online.</td>
+      <td>So the ads and analytics libraries can tell whether the device is online.</td>
     </tr>
   </tbody>
 </table>

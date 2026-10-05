@@ -27,7 +27,8 @@ software may collect, and how to contact us.</p>
 <p>Your screen-time figures stay on the device. There is no Sthir server and you have no account.
 Nothing the app measures about your phone use is ever uploaded.</p>
 <p>The app does show ads (Google AdMob) on three secondary screens. That service is operated by
-Google, not by us. We do not sell your information.</p>
+Google, not by us. Sthir also counts which of its screens and features are used, through Google
+Analytics &mdash; never which apps you use or for how long. We do not sell your information.</p>
 
 <h2>What we store on the phone</h2>
 <ul>
@@ -74,8 +75,19 @@ consent.</p>
 </ul>
 <p>Debug builds of the app use Google&rsquo;s sample ad units and never request live ads.</p>
 
-<h2>Analytics</h2>
-<p>The app contains no analytics software of our own. We do not measure which screens you open.</p>
+<h2>Usage analytics</h2>
+<p>Sthir uses Google Analytics for Firebase to count which of its screens are opened and which
+features are used &mdash; for example &ldquo;the weekly reflection was opened&rdquo;, &ldquo;a focus
+session was started&rdquo; or &ldquo;usage was exported as CSV&rdquo; &mdash; so we know which parts
+of the app to improve first. With each event Google also records the app version, the phone model,
+the Android version, the language, an approximate country derived from the IP address, and a random
+identifier for this installation of the app.</p>
+<p>Analytics never receives your screen time, your unlock counts, the names of apps you use or
+pause, your focus history or your wind-down hours. Collection of the advertising identifier and ad
+personalisation are both switched off for analytics. Google processes these events on our behalf as
+described in <a href="https://firebase.google.com/support/privacy">Firebase privacy and security</a>
+and keeps them for a limited time. Clearing Sthir&rsquo;s data in Android settings resets the
+installation identifier.</p>
 
 <h2>Export</h2>
 <p>If you export a CSV, you choose where it is saved through the system file picker. We do not upload
@@ -94,7 +106,8 @@ it and we never see it.</p>
     </tr>
     <tr>
       <td><code>INTERNET</code></td>
-      <td>Only to load the banner ads described above. No screen-time data is sent over it.</td>
+      <td>To load the banner ads and send the usage analytics described above. No screen-time data is
+          sent over it.</td>
     </tr>
     <tr>
       <td><code>ACCESS_NETWORK_STATE</code></td>

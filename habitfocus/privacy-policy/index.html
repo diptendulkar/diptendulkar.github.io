@@ -28,7 +28,8 @@ software may collect, and how to contact us.</p>
 focus sessions, scheduled focus windows and screen-time history &mdash; stays on the device. There is
 no HabitFocus server and you have no account. None of it is uploaded.</p>
 <p>The app shows a small ad card (Google AdMob) at the bottom of three screens. That service is operated by Google, not
-by us. We do not sell your information.</p>
+by us. HabitFocus also counts which screens and features are used, through Google Analytics, so we
+know what to improve first &mdash; never your habits or screen time. We do not sell your information.</p>
 
 <h2>What we store on the phone</h2>
 <ul>
@@ -85,8 +86,19 @@ consent.</p>
 </ul>
 <p>Debug builds of the app use Google&rsquo;s sample ad units and never request live ads.</p>
 
-<h2>Analytics</h2>
-<p>The app contains no analytics software of our own. We do not measure which screens you open.</p>
+<h2>Usage analytics</h2>
+<p>HabitFocus uses Google Analytics for Firebase to count which screens are opened and which
+features are used &mdash; for example &ldquo;a habit was checked off&rdquo;, &ldquo;a focus session
+was started&rdquo; or &ldquo;a goal was saved&rdquo; &mdash; so we know which parts of the app to
+improve first. With each event Google also records the app version, the phone model, the Android
+version, the language, an approximate country derived from the IP address, and a random identifier
+for this installation of the app.</p>
+<p>Analytics never receives a habit or goal name, a note, your mood or energy, your momentum, your
+screen time, the apps you block or the devices you pair. Collection of the advertising identifier
+and ad personalisation are both switched off for analytics. Google processes these events on our
+behalf as described in <a href="https://firebase.google.com/support/privacy">Firebase privacy and
+security</a> and keeps them for a limited time. Clearing the app&rsquo;s data in Android settings
+resets the installation identifier.</p>
 
 <h2>Export</h2>
 <p>If you export a backup, you choose where it is saved through the system file picker. We do not
@@ -129,7 +141,8 @@ upload it and we never see it.</p>
     </tr>
     <tr>
       <td><code>INTERNET</code>, <code>ACCESS_NETWORK_STATE</code></td>
-      <td>Only to load the ad described above. None of your data is sent over it.</td>
+      <td>To load the ad and send the usage analytics described above. None of your data is sent over
+          it.</td>
     </tr>
     <tr>
       <td><code>AD_ID</code></td>
