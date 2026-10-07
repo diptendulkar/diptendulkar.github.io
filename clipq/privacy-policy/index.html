@@ -29,8 +29,14 @@ so we know what to improve first.</p>
 
 <h2>What ClipQ reads</h2>
 <ul>
-  <li><strong>Photos and videos you pick.</strong> ClipQ uses the Android photo picker, so it only
-      sees the items you choose. It never scans your gallery.</li>
+  <li><strong>Your gallery, if you allow it.</strong> When you start a video, add a clip, make an
+      AutoCut or extract audio, ClipQ shows your videos and photos inside the app so the newest clip
+      is at the top. Android asks first: you can allow all of them, allow only the ones you select,
+      or decline and pick with the Android photo picker instead. ClipQ reads the list and the
+      thumbnails only to show them to you on screen. It opens only the items you add to a project,
+      and never copies, uploads or analyses the rest.</li>
+  <li><strong>Photos for collages, posters and photo looks</strong> come through the Android photo
+      picker, so ClipQ only sees the photos you choose there.</li>
   <li><strong>Audio files you pick.</strong> Songs you add are read from where they are. ClipQ does
       not copy them unless you ask it to extract audio from a video.</li>
   <li><strong>Your microphone, only while you record a voiceover.</strong> Recording starts when you
@@ -100,6 +106,10 @@ file</strong> to create a <code>.clipq</code> file, which you control.</p>
 
 <h2>Permissions</h2>
 <ul>
+  <li><strong>Photos and videos</strong> (read only) let ClipQ show your gallery when you add clips,
+      as described above. ClipQ asks the first time you open its gallery, and if you decline, or
+      allow only some items, the Android photo picker still works for everything. On Android 12 and
+      older this is the storage read permission.</li>
   <li><strong>Internet</strong> sends the usage analytics and Google component diagnostics described
       above. Editing and saving never need it.</li>
   <li><strong>Microphone</strong> records voiceovers and the sound of teleprompter takes, only while
@@ -112,7 +122,7 @@ file</strong> to create a <code>.clipq</code> file, which you control.</p>
   <li><strong>Foreground service</strong> keeps an export running when the screen is off.</li>
   <li><strong>Vibrate</strong> gives a small tick when a trim snaps. You can switch it off in
       Settings.</li>
-  <li><strong>Storage (Android 9 and older only)</strong> is needed to save finished videos to the
+  <li><strong>Storage write (Android 9 and older only)</strong> is needed to save finished videos to the
       gallery on those versions.</li>
 </ul>
 
