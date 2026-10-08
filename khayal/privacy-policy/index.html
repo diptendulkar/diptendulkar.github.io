@@ -17,7 +17,7 @@
 </header>
 
 <h1>Privacy Policy</h1>
-<p class="updated">Last updated: 5 October 2026</p>
+<p class="updated">Last updated: 8 October 2026</p>
 
 <p class="lede">Khayal (&ldquo;the app&rdquo;) is a free Android medicine reminder and care tracker,
 published as <code>com.dip.khayal</code> by Saral Labs Indian Apps (developer: Diptendu Das). This
@@ -45,6 +45,8 @@ to improve first &mdash; never anything you enter.</p>
   <li>Vital readings you enter: blood pressure, blood sugar, weight, temperature, SpO&#8322;</li>
   <li>Appointments and the &ldquo;bring these reports&rdquo; note</li>
   <li>Photographs of pill strips you choose to attach</li>
+  <li>Lab reports you add: the test values, units and reference ranges you confirm, the date and lab
+      name, and a copy of the original PDF or scanned pages so you can open it again later</li>
 </ul>
 <p>This is stored in Khayal&rsquo;s private app storage, where other apps cannot read it. It is
 excluded from Android&rsquo;s cloud backup, so it is not copied to Google Drive. Uninstalling Khayal
@@ -56,6 +58,11 @@ deletes all of it, which is why the app asks you to acknowledge that on first la
   <li>No health data is transmitted anywhere, ever</li>
   <li>Prescription photographs are read by an on-device text recogniser and deleted immediately after
       reading. The image is never uploaded</li>
+  <li>Lab reports are read on the phone, by the same on-device text recogniser or from the text
+      already inside the PDF. The report and its values are never uploaded. A PDF password you type
+      is used once to open the file and is not stored</li>
+  <li>Khayal does not interpret lab results. It shows the values and the ranges the lab printed,
+      and says nothing about what they mean</li>
   <li>Nothing you enter is sent to Google, to us, or to any advertiser</li>
 </ul>
 
@@ -88,8 +95,9 @@ given&rdquo; or &ldquo;a doctor chart was exported&rdquo; &mdash; so we know whi
 to improve first. With each event Google also records the app version, the phone model, the Android
 version, the language, an approximate country derived from the IP address, and a random identifier
 for this installation of the app.</p>
-<p>Analytics never receives a name, an age, a medicine, a strength, a dose time, a vital reading, an
-appointment, a note or a photograph. Collection of the advertising identifier and ad personalisation
+<p>Analytics never receives a name, an age, a medicine, a strength, a dose time, a vital reading, a
+lab result, an appointment, a note or a photograph. For lab reports it counts only that one was
+added, how it was added (scan, PDF or photo) and how many values were saved. Collection of the advertising identifier and ad personalisation
 are both switched off for analytics. Google processes these events on our behalf as described in
 <a href="https://firebase.google.com/support/privacy">Firebase privacy and security</a> and keeps
 them for a limited time. Clearing Khayal&rsquo;s data in Android settings resets the installation
@@ -152,15 +160,18 @@ first.</p>
   </tbody>
 </table>
 <p>Khayal does not request the camera permission. When you photograph a pill strip or a prescription,
-your own camera app takes the picture and hands the file back. The app does not ask for contacts,
-SMS or location.</p>
+your own camera app takes the picture and hands the file back. When you scan a lab report, the
+scanning screen is Google&rsquo;s document scanner, provided by Google Play services on your phone;
+it works on the device and hands the scanned pages back to Khayal. The app does not ask for
+contacts, SMS or location.</p>
 
 <h2>Sharing</h2>
 <p>Nothing leaves your phone unless you send it:</p>
 <ul>
-  <li><strong>Doctor chart PDF</strong> &mdash; you choose the app and the recipient each time.</li>
+  <li><strong>Doctor chart PDF</strong> &mdash; you choose the app and the recipient each time. If
+      you include lab results, it lists the latest value of each test.</li>
   <li><strong>Caregiver handoff file</strong> &mdash; a file you export and send to whoever you
-      choose.</li>
+      choose. It carries lab report values but not the original PDFs or scanned pages.</li>
 </ul>
 <p>Once you have sent either of those, what happens to it is governed by the app you sent it with.</p>
 
