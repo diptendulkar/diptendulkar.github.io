@@ -122,6 +122,18 @@
   --accent-outline: #6e3a2e;
 }
 
+/* Tessera's own dark is #0E0C14 with a hot pink #FF5FA2. */
+
+.app-tessera {
+  --ink: #0e0c14;
+  --ink-surface: #17141f;
+  --ink-line: #2c2738;
+  --accent: #ff7ab3;
+  --accent-dim: #ff5fa2;
+  --accent-tint: #2a1424;
+  --accent-outline: #73345a;
+}
+
 * {
   box-sizing: border-box;
 }
@@ -382,6 +394,10 @@ code {
 
 .app-name em.clipq {
   color: #ef7a64;
+}
+
+.app-name em.tessera {
+  color: #ff7ab3;
 }
 
 .app-row {
