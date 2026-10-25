@@ -134,6 +134,18 @@
   --accent-outline: #73345a;
 }
 
+/* Peeku's night violet #221A5C with its sunset gold #FFB547. */
+
+.app-peeku {
+  --ink: #120e2e;
+  --ink-surface: #1c1642;
+  --ink-line: #322a63;
+  --accent: #ffb547;
+  --accent-dim: #ff9f1c;
+  --accent-tint: #2a2010;
+  --accent-outline: #7a5a22;
+}
+
 * {
   box-sizing: border-box;
 }
@@ -398,6 +410,10 @@ code {
 
 .app-name em.tessera {
   color: #ff7ab3;
+}
+
+.app-name em.peeku {
+  color: #ffb547;
 }
 
 .app-row {
