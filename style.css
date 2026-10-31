@@ -146,6 +146,18 @@
   --accent-outline: #7a5a22;
 }
 
+/* ClearSpace's deep water #0B1A2E with its water blue #3FA7E8. */
+
+.app-clearspace {
+  --ink: #0b1a2e;
+  --ink-surface: #12243b;
+  --ink-line: #23405f;
+  --accent: #6cc0f2;
+  --accent-dim: #3fa7e8;
+  --accent-tint: #10283f;
+  --accent-outline: #34587e;
+}
+
 * {
   box-sizing: border-box;
 }
@@ -414,6 +426,10 @@ code {
 
 .app-name em.peeku {
   color: #ffb547;
+}
+
+.app-name em.clearspace {
+  color: #6cc0f2;
 }
 
 .app-row {

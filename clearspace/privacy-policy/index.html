@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en" class="app-clearspace">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Privacy Policy — ClearSpace</title>
+<meta name="description" content="What ClearSpace reads on the phone, what it keeps, and what it never does. No analytics, no ads, no account.">
+<link rel="stylesheet" href="../../style.css">
+</head>
+<body>
+<div class="wrap">
+
+<header class="site">
+  <a class="crumb" href="../../">← Apps by Diptendu</a>
+  <a class="wordmark" href="../">Clear<span>Space</span></a>
+  <div class="badge">Storage cleaner · no ads, no subscriptions</div>
+</header>
+
+<h1>Privacy Policy</h1>
+<p class="updated">Last updated: 27 October 2026</p>
+
+<p>ClearSpace helps you clear storage on your Android phone: blurry photos, screenshots, copies of the same photo or video, junk files, and apps you no longer use. It is made by Saral Labs (Diptendu Das). This policy explains what the app looks at, what it keeps, and what it never does.</p>
+
+<h2>The short version</h2>
+<p>Everything is checked on your phone. We operate no server, you have no account, and the app contains no analytics and no advertising. Our own code makes no network requests, and the app does not request the internet permission. Nothing about your photos, files or apps is sent to us or to anyone else.</p>
+<p>The app shows no ads and has no subscriptions. Every feature is included, with nothing to unlock.</p>
+
+<h2>What the app reads, and why</h2>
+<p>Each of these is a permission you grant in Android's own settings, and each can be turned off there at any time. The app keeps working with whatever you leave on.</p>
+<ul>
+  <li><strong>Photos and videos.</strong> Read to find blurry shots, screenshots, exact copies and near-identical photos. To judge sharpness and similarity, the app makes a small, temporary grayscale copy of each photo in memory and measures it. The pictures themselves are never copied, uploaded or changed.</li>
+  <li><strong>All files access (optional).</strong> Lets the app look through shared storage for old installer (.apk) files, temporary files, thumbnail caches, empty folders, folders left by apps that are no longer installed, and files over 100 MB. It never opens the private folders of other apps (<code>Android/data</code> and <code>Android/obb</code>), and it reads file names and sizes, not what is inside your documents.</li>
+  <li><strong>Usage access (optional).</strong> Lets the app see when each app was last opened and how much storage each app uses, so it can list apps you have not used for 3 months, 6 months or a year. It does not show, and the app does not collect, anything you did inside other apps.</li>
+  <li><strong>The list of apps with a launcher icon.</strong> Used to show the app manager. The app does not request access to every installed package.</li>
+</ul>
+
+<h2>What the app stores</h2>
+<p>To avoid re-reading your whole library on every scan, the app keeps a small database in its private storage with, for each photo or video: its MediaStore id, size, modified time, a fingerprint of its contents (a SHA-256 hash, only for files that share a size with another file), a 128-bit visual fingerprint, and a sharpness score. Nothing in it can be turned back into a picture. Other apps cannot read it, it is excluded from Android backups and phone-to-phone transfers, and uninstalling the app removes it.</p>
+<p>The app also stores your theme choice, whether you have seen the welcome screens, and a launch count used to decide when to show Google Play's review prompt.</p>
+
+<h2>What happens when you clean</h2>
+<p>Nothing is removed unless you choose it.</p>
+<ul>
+  <li><strong>Photos and videos</strong> are moved to the system trash through Android's own confirmation dialog. You can restore them from your gallery for 30 days, after which Android deletes them.</li>
+  <li><strong>Junk files</strong> are deleted when you confirm. They do not go to a trash.</li>
+  <li><strong>Apps</strong> are uninstalled through Android's own uninstall dialog, one app at a time.</li>
+  <li><strong>App cache</strong> of other apps cannot be cleared by any app on Android. ClearSpace opens each app's settings page so you can clear it there.</li>
+</ul>
+
+<h2>Google Play services in the app</h2>
+<p>The app uses two Google Play libraries: in-app updates, which tells you when a new version is ready, and in-app review, which can show Google Play's rating prompt. Both talk to the Google Play Store app on your phone, not to us, and are governed by the <a href="https://policies.google.com/privacy">Google privacy policy</a>. They receive nothing about your photos, files or apps.</p>
+
+<h2>Children</h2>
+<p>The app is not directed at children and collects no personal information from anyone.</p>
+
+<h2>Contact</h2>
+<p>Diptendu Das, Saral Labs: diptendu.tu@gmail.com</p>
+
+<h2>Changes</h2>
+<p>If this policy changes, the new version will be published at this address and inside the app, with a new date at the top.</p>
+
+<footer class="site">
+  <a href="../../">Apps by Diptendu</a> &middot; <a href="../">ClearSpace</a>
+</footer>
+
+</div>
+</body>
+</html>
