@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Privacy Policy — ClearSpace</title>
-<meta name="description" content="What ClearSpace reads on the phone, what it keeps, and what it never does. No analytics, no ads, no account.">
+<meta name="description" content="What ClearSpace reads on the phone, what stays there, and the anonymous feature-use analytics it sends. No ads and no account.">
 <link rel="stylesheet" href="../../style.css">
 </head>
 <body>
@@ -17,12 +17,12 @@
 </header>
 
 <h1>Privacy Policy</h1>
-<p class="updated">Last updated: 27 October 2026</p>
+<p class="updated">Last updated: 2 November 2026</p>
 
 <p>ClearSpace helps you clear storage on your Android phone: blurry photos, screenshots, copies of the same photo or video, junk files, and apps you no longer use. It is made by Saral Labs (Diptendu Das). This policy explains what the app looks at, what it keeps, and what it never does.</p>
 
 <h2>The short version</h2>
-<p>Everything is checked on your phone. We operate no server, you have no account, and the app contains no analytics and no advertising. Our own code makes no network requests, and the app does not request the internet permission. Nothing about your photos, files or apps is sent to us or to anyone else.</p>
+<p>Your photos, file names, paths, installed-app names and package names are checked on your phone and are never sent anywhere. We operate no server and you have no account. ClearSpace uses Google Analytics for Firebase to count which screens and features are used, so we know what to improve first. Those reports contain app interactions and an installation identifier, never the content the app finds on your phone. Google derives approximate location from the masked IP address used to deliver those reports.</p>
 <p>The app shows no ads and has no subscriptions. Every feature is included, with nothing to unlock.</p>
 
 <h2>What the app reads, and why</h2>
@@ -38,6 +38,24 @@
 <p>To avoid re-reading your whole library on every scan, the app keeps a small database in its private storage with, for each photo or video: its MediaStore id, size, modified time, a fingerprint of its contents (a SHA-256 hash, only for files that share a size with another file), a 128-bit visual fingerprint, and a sharpness score. Nothing in it can be turned back into a picture. Other apps cannot read it, it is excluded from Android backups and phone-to-phone transfers, and uninstalling the app removes it.</p>
 <p>The app also stores your theme choice, whether you have seen the welcome screens, and a launch count used to decide when to show Google Play's review prompt.</p>
 
+<h2>Anonymous usage analytics</h2>
+<p>ClearSpace sends pseudonymous app-interaction events to Google Analytics for Firebase. These include:</p>
+<ul>
+  <li>when the app is opened and how long a session stays active;</li>
+  <li>which ClearSpace screens are opened;</li>
+  <li>whether onboarding was completed and which light, dark or system theme was selected;</li>
+  <li>whether a scan started, finished or failed;</li>
+  <li>which photo-cleaning tab was used and how many selected items were moved to Android's trash;</li>
+  <li>how many junk items and categories were cleared;</li>
+  <li>which unused-app filter or sort was selected, and how many apps in an uninstall batch were requested and removed;</li>
+  <li>whether the cache guide opened an app's Android settings page, without the app's identity;</li>
+  <li>whether the app was shared, the Play listing was opened, the review prompt was requested, or an update was offered or installed; and</li>
+  <li>app version, Android version, device model, an installation identifier, and approximate location derived by Google from a masked IP address.</li>
+</ul>
+<p>The events never contain a photo or video name, MediaStore id, thumbnail, file name or path, app name or package name, byte count, last-used time, permission result, or anything the user viewed or did inside another app. Advertising-ID collection and ad-personalisation signals are disabled. Google Signals is not enabled and Analytics is not linked to an advertising account.</p>
+<p>This data is collected to measure feature use and improve the app. It is not sold or used for advertising. Google processes it for us under the <a href="https://policies.google.com/privacy">Google privacy policy</a> and <a href="https://firebase.google.com/support/privacy">Firebase privacy information</a>. Clearing ClearSpace's storage or uninstalling it resets its installation identifier and removes everything stored locally. Because there is no account and we do not receive an identity, we cannot connect an analytics installation to a person in order to retrieve or delete one person's past events.</p>
+<p>For this reporting the app declares internet and network-state access. Firebase also adds wake-lock access so a queued event can finish if the screen turns off. None asks for a user-facing permission. The app explicitly removes advertising-ID and ad-services attribution permissions.</p>
+
 <h2>What happens when you clean</h2>
 <p>Nothing is removed unless you choose it.</p>
 <ul>
@@ -47,11 +65,11 @@
   <li><strong>App cache</strong> of other apps cannot be cleared by any app on Android. ClearSpace opens each app's settings page so you can clear it there.</li>
 </ul>
 
-<h2>Google Play services in the app</h2>
+<h2>Other Google Play services in the app</h2>
 <p>The app uses two Google Play libraries: in-app updates, which tells you when a new version is ready, and in-app review, which can show Google Play's rating prompt. Both talk to the Google Play Store app on your phone, not to us, and are governed by the <a href="https://policies.google.com/privacy">Google privacy policy</a>. They receive nothing about your photos, files or apps.</p>
 
 <h2>Children</h2>
-<p>The app is not directed at children and collects no personal information from anyone.</p>
+<p>The app is not directed at children.</p>
 
 <h2>Contact</h2>
 <p>Diptendu Das, Saral Labs: diptendu.tu@gmail.com</p>
