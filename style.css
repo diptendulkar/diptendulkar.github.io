@@ -122,6 +122,18 @@
   --accent-outline: #6e3a2e;
 }
 
+/* ShubhDin maroon #6B1F2A and gold #C9A227 — lifted for dark site readability. */
+
+.app-shubhdin {
+  --ink: #12080c;
+  --ink-surface: #1f1016;
+  --ink-line: #2e1820;
+  --accent: #d4b04a;
+  --accent-dim: #c9a227;
+  --accent-tint: #2a1f0a;
+  --accent-outline: #6b4f1c;
+}
+
 /* Tessera's own dark is #0E0C14 with a hot pink #FF5FA2. */
 
 .app-tessera {
@@ -426,6 +438,11 @@ code {
 
 .app-name em.peeku {
   color: #ffb547;
+}
+
+.app-name em.shubhdin {
+  color: var(--accent);
+  font-style: normal;
 }
 
 .app-name em.clearspace {
