@@ -17,7 +17,7 @@
 </header>
 
 <h1>Privacy Policy</h1>
-<p class="updated">Last updated: 30 October 2026</p>
+<p class="updated">Last updated: 2 November 2026</p>
 
 <p class="lede">ClipQ (&ldquo;the app&rdquo;) is an Android video editor made by Saral Labs,
 published as <code>com.dip.clipq</code>. This policy explains what the app does with your data.</p>
@@ -71,6 +71,8 @@ ClipQ removes all of it except the videos you saved to your gallery.</p>
 and exporting happen on your phone, and work with no connection. ClipQ shows no ads.</p>
 <p><strong>Usage analytics.</strong> Which screens and tools are used, described in the next
 section.</p>
+<p><strong>Crash diagnostics.</strong> Technical details when ClipQ crashes or stops responding,
+described below.</p>
 <p><strong>Diagnostics from Google&rsquo;s on-phone components.</strong> Google&rsquo;s ML Kit, which
 finds the person for background removal and the cutout collage, reports metrics about itself to
 Google, such as how long it took and whether it worked, as described in
@@ -83,7 +85,7 @@ is available, and may show Play&rsquo;s rating sheet. Google handles this under
 Play downloads them to your phone. After that, captions are made on your phone: your audio is
 never sent anywhere. Google Play services may
 likewise download the on-phone model that finds objects in a photo for background removal.</p>
-<p>ClipQ has no account, no sign-in, and no crash reporting service of its own.</p>
+<p>ClipQ has no account and no sign-in.</p>
 
 <h2>Usage analytics</h2>
 <p>ClipQ uses Google Analytics for Firebase to count which screens are opened and which tools are
@@ -101,6 +103,17 @@ both switched off. Google processes these events on our behalf as described in
 them for a limited time. Clearing ClipQ&rsquo;s data in Android settings resets the installation
 identifier.</p>
 
+<h2>Crash diagnostics</h2>
+<p>ClipQ uses Firebase Crashlytics to report crashes and app-not-responding errors. A report can
+include the stack trace, app version, phone model, Android version, memory and device state at the
+time of the failure, and a random installation identifier. Analytics events may appear as
+breadcrumbs leading up to a failure. This helps us find which feature failed and confirm that an
+update fixed it.</p>
+<p>Crashlytics never receives a photo, video, voice recording, song, caption, text you type, file
+name or project name. Google processes diagnostic reports on our behalf as described in
+<a href="https://firebase.google.com/support/privacy#crash-stored-info">Firebase Crashlytics data
+and privacy</a> and keeps them for a limited time.</p>
+
 <h2>Backups</h2>
 <p>ClipQ opts out of Android cloud backup for its projects and files, because drafts point to media
 that may not exist on another phone. To move a project to another phone, use <strong>Save draft
@@ -116,7 +129,7 @@ file</strong> to create a <code>.clipq</code> file, which you control.</p>
       add music, so you can pick one without searching through folders. ClipQ asks the first time
       you open that list. A song you pick is copied into ClipQ's own storage for My music; nothing is
       uploaded. If you decline, Browse files still opens the Android file picker.</li>
-  <li><strong>Internet</strong> sends the usage analytics and Google component diagnostics described
+  <li><strong>Internet</strong> sends the usage analytics and diagnostics described
       above. Editing and saving never need it.</li>
   <li><strong>Microphone</strong> records voiceovers and the sound of teleprompter takes, only while
       you are recording. ClipQ asks the first time you tap record or open the teleprompter, and
