@@ -134,6 +134,19 @@
   --accent-outline: #6b4f1c;
 }
 
+/* Rangrez is indigo #4A4FD6, madder and turmeric on #0B0A0F. Indigo carries the site, lifted to
+   read on dark, because turmeric is too close to ShubhDin's gold and madder to Tessera's pink. */
+
+.app-rangrez {
+  --ink: #0b0a0f;
+  --ink-surface: #15121c;
+  --ink-line: #221e2b;
+  --accent: #9a9dff;
+  --accent-dim: #7c80f0;
+  --accent-tint: #191a33;
+  --accent-outline: #3d4091;
+}
+
 /* Tessera's own dark is #0E0C14 with a hot pink #FF5FA2. */
 
 .app-tessera {
@@ -443,6 +456,10 @@ code {
 .app-name em.shubhdin {
   color: var(--accent);
   font-style: normal;
+}
+
+.app-name em.rangrez {
+  color: #9a9dff;
 }
 
 .app-name em.clearspace {
