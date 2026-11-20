@@ -183,6 +183,19 @@
   --accent-outline: #34587e;
 }
 
+/* My SMS is mint #4FD1A5 on #0E1116. Its rose and amber are for money out and bills, so the site
+   keeps to the mint, which sits a little greener than Khayal's teal. */
+
+.app-mysms {
+  --ink: #0e1116;
+  --ink-surface: #161b22;
+  --ink-line: #262d36;
+  --accent: #4fd1a5;
+  --accent-dim: #3bb98f;
+  --accent-tint: #12241e;
+  --accent-outline: #2a5a4a;
+}
+
 * {
   box-sizing: border-box;
 }
@@ -464,6 +477,10 @@ code {
 
 .app-name em.clearspace {
   color: #6cc0f2;
+}
+
+.app-name em.mysms {
+  color: #4fd1a5;
 }
 
 .app-row {
