@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Privacy Policy — My SMS</title>
-<meta name="description" content="What My SMS reads from your messages, why your messages and the spending worked out from them never leave your phone, and how its non-personalised AdMob banners work.">
+<meta name="description" content="What My SMS reads from your messages, why your messages and the spending worked out from them never leave your phone, and what the app does without ads or internet access.">
 <link rel="stylesheet" href="../../style.css">
 </head>
 <body>
@@ -17,7 +17,7 @@
 </header>
 
 <h1>Privacy Policy</h1>
-<p class="updated">Last updated: 19 November 2026</p>
+<p class="updated">Last updated: 21 November 2026</p>
 
 <p class="lede">My SMS is a messaging app by Saral Labs, published on Google Play as
 <code>com.dip.mysms</code>. It replaces your phone&rsquo;s SMS app and sorts your messages into OTPs,
@@ -29,8 +29,9 @@ everything My SMS works out from them, stay on your phone.</strong></p>
   <li>Your messages, and everything My SMS works out from them, stay on your phone.</li>
   <li>My SMS has no account, no sign-in and no server. Nothing about your messages or money is
       uploaded.</li>
-  <li>The only network traffic is Google&rsquo;s ad and consent SDKs on three screens, Play&rsquo;s
-      update and review checks, and the MMS your carrier delivers.</li>
+  <li>My SMS has no ads and does not hold Android&rsquo;s internet permission. Messages you send go
+      through your carrier, and app updates and review prompts come through the Google Play Store
+      app.</li>
 </ul>
 
 <h2>What My SMS reads, and why</h2>
@@ -51,25 +52,19 @@ choose which one sends.</p>
 <h2>What leaves your phone</h2>
 <ul>
   <li><strong>Messages you send</strong> go through your mobile carrier, as with any SMS app.</li>
-  <li><strong>Ads.</strong> The Money, Coupons and Split screens show one banner from Google Mobile Ads
-      (AdMob). Every ad request is non-personalised. AdMob receives the device information its SDK
-      collects, such as an advertising ID, IP address and app interactions, as described in
-      <a href="https://policies.google.com/technologies/ads">Google&rsquo;s policy</a>. My SMS never
-      passes any message text, sender, amount, merchant or category to AdMob. No ads appear in
-      conversations, on OTPs, in notifications or during setup. Debug builds use Google&rsquo;s sample
-      ad units.</li>
-  <li><strong>Consent.</strong> In regions where it is required, Google&rsquo;s User Messaging Platform
-      asks for your consent before ads load. You can change your choice under
-      <strong>Settings → Privacy choices</strong>.</li>
-  <li><strong>Play services.</strong> Google Play checks for app updates and may show a review
-      prompt.</li>
+  <li><strong>Picture messages</strong> are downloaded and sent by Android&rsquo;s own MMS service over
+      your carrier&rsquo;s network.</li>
+  <li><strong>Play services.</strong> The Google Play Store app checks for and installs updates to My
+      SMS, and may show a review prompt. Google handles that under its own privacy policy.</li>
+  <li><strong>Things you share.</strong> When you share a split summary or a message, it goes to the
+      app you pick.</li>
 </ul>
 
 <h2>What My SMS does not do</h2>
 <ul>
   <li>It does not upload, back up or sync your messages or financial data.</li>
   <li>It does not sell or share your data with anyone.</li>
-  <li>It does not use your messages for advertising.</li>
+  <li>It does not show ads or contain an advertising SDK.</li>
   <li>It does not include analytics or crash reporting SDKs.</li>
   <li>It excludes its database from Android cloud backup and device transfer.</li>
 </ul>
@@ -90,17 +85,12 @@ choose which one sends.</p>
         sends.</td></tr>
     <tr><td><code>POST_NOTIFICATIONS</code>, <code>VIBRATE</code></td><td>For new-message alerts and bill
         reminders.</td></tr>
-    <tr><td><code>INTERNET</code>, <code>ACCESS_NETWORK_STATE</code></td><td>So the banner ads, the
-        consent form and Play&rsquo;s update check can load. Our own code makes no network
-        requests.</td></tr>
-    <tr><td><code>AD_ID</code></td><td>So AdMob can read the advertising identifier for frequency
-        capping and fraud checks. Ads are never personalised.</td></tr>
-    <tr><td><code>ACCESS_ADSERVICES_*</code></td><td>Not declared by us. Added by the Google Mobile Ads
-        library for Android&rsquo;s Privacy Sandbox and used by Google&rsquo;s ad serving, not by any
-        code of ours.</td></tr>
-    <tr><td><code>WAKE_LOCK</code>, <code>FOREGROUND_SERVICE</code></td><td>Not declared by us. Added by
-        Android&rsquo;s background-work library, which runs the bill reminders and the first scan of
-        your bank messages.</td></tr>
+    <tr><td><code>RECEIVE_BOOT_COMPLETED</code></td><td>So bill reminders survive a restart of the
+        phone.</td></tr>
+    <tr><td><code>WAKE_LOCK</code>, <code>FOREGROUND_SERVICE</code>, <code>ACCESS_NETWORK_STATE</code></td><td>Not
+        declared by us. Added by Android&rsquo;s background-work library, which runs the bill reminders
+        and the first scan of your bank messages. It only reads whether a network is present; My SMS
+        has no internet permission.</td></tr>
   </tbody>
 </table>
 <p>My SMS does not support RCS chat. Only Google Messages can access RCS on Android.</p>
