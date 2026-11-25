@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Privacy Policy — My SMS</title>
-<meta name="description" content="What My SMS reads from your messages, why your messages and the spending worked out from them never leave your phone, and what the app does without ads or internet access.">
+<meta name="description" content="What My SMS reads from your messages, why your messages and the spending worked out from them never leave your phone, and the anonymous usage statistics you can choose to share.">
 <link rel="stylesheet" href="../../style.css">
 </head>
 <body>
@@ -17,7 +17,7 @@
 </header>
 
 <h1>Privacy Policy</h1>
-<p class="updated">Last updated: 22 November 2026</p>
+<p class="updated">Last updated: 25 November 2026</p>
 
 <p class="lede">My SMS is a messaging app by Saral Labs, published on Google Play as
 <code>com.dip.mysms</code>. It replaces your phone&rsquo;s SMS app and sorts your messages into OTPs,
@@ -29,9 +29,10 @@ everything My SMS works out from them, stay on your phone.</strong></p>
   <li>Your messages, and everything My SMS works out from them, stay on your phone.</li>
   <li>My SMS has no account, no sign-in and no server. Nothing about your messages or money is
       uploaded.</li>
-  <li>My SMS has no ads and does not hold Android&rsquo;s internet permission. Messages you send go
-      through your carrier, and app updates and review prompts come through the Google Play Store
-      app.</li>
+  <li>My SMS has no ads. It uses the internet only for anonymous usage statistics, and only if you
+      turn them on. They never include message text, amounts, names or numbers.</li>
+  <li>Messages you send go through your carrier, and app updates and review prompts come through the
+      Google Play Store app.</li>
 </ul>
 
 <h2>What My SMS reads, and why</h2>
@@ -65,6 +66,15 @@ see them.</p>
   <li><strong>Messages you send</strong> go through your mobile carrier, as with any SMS app.</li>
   <li><strong>Picture messages</strong> are downloaded and sent by Android&rsquo;s own MMS service over
       your carrier&rsquo;s network.</li>
+  <li><strong>Usage statistics, only if you turn them on.</strong> My SMS asks once, and you can
+      change it any time in Settings under &ldquo;Anonymous usage statistics&rdquo;. It is off until
+      you say yes. When on, Google Analytics for Firebase receives which screens and features you use
+      (for example &ldquo;opened a transaction&rdquo; or &ldquo;added a bill&rdquo;), settings you
+      change, the app version, your phone model and Android version, and a country worked out from
+      the connection. It never receives message text, senders, phone numbers, contact names, amounts,
+      merchants or account digits, and My SMS does not collect the advertising ID. Google keeps this
+      data under its own privacy policy; My SMS uses it only to see which features help and where
+      people get stuck. Turning it off stops it at once.</li>
   <li><strong>Play services.</strong> The Google Play Store app checks for and installs updates to My
       SMS, and may show a review prompt. Google handles that under its own privacy policy.</li>
   <li><strong>Things you share.</strong> When you send a payment reminder, export a month&rsquo;s
@@ -82,7 +92,8 @@ see them.</p>
       file exists only when you make one.</li>
   <li>It does not sell or share your data with anyone.</li>
   <li>It does not show ads or contain an advertising SDK.</li>
-  <li>It does not include analytics or crash reporting SDKs.</li>
+  <li>It does not include crash reporting SDKs, and the one analytics SDK sends nothing unless you
+      turn usage statistics on.</li>
   <li>It excludes its database from Android cloud backup and device transfer.</li>
 </ul>
 
@@ -106,10 +117,11 @@ see them.</p>
         with your fingerprint or face, if you use it.</td></tr>
     <tr><td><code>RECEIVE_BOOT_COMPLETED</code></td><td>So reminders and scheduled messages survive a
         restart of the phone.</td></tr>
+    <tr><td><code>INTERNET</code></td><td>Added by Google Analytics for Firebase. Used only to send usage
+        statistics, and only when you turn them on. Messages and money never go over it.</td></tr>
     <tr><td><code>WAKE_LOCK</code>, <code>FOREGROUND_SERVICE</code>, <code>ACCESS_NETWORK_STATE</code></td><td>Not
         declared by us. Added by Android&rsquo;s background-work library, which runs the bill reminders
-        and the first scan of your bank messages. It only reads whether a network is present; My SMS
-        has no internet permission.</td></tr>
+        and the first scan of your bank messages. It only reads whether a network is present.</td></tr>
   </tbody>
 </table>
 <p>My SMS does not support RCS chat. Only Google Messages can access RCS on Android.</p>
